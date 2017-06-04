@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+class SpecialNumber
+{
+    static void Main()
+    {
+       
+        int n = int.Parse(Console.ReadLine());
+        string isTrue = "False";
+        for (int i = 1; i <= n; i++)
+        {
+            string test = Convert.ToString(i);
+            char[] sum = test.ToCharArray();
+            int result = 0;
+            foreach (var item in sum)
+            {
+                isTrue = "False";
+                double value = Char.GetNumericValue(item);
+                result += (int)value;
+                if (result==5|| result ==7|| result ==11)
+                {
+                    isTrue = "True";
+                }
+            }
+            Console.WriteLine($"{test} ->{isTrue}");
+        }
+    }
+}
