@@ -1,0 +1,12 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+class CirclePerimeter
+{
+    static void Main()
+    {
+        double r = double.Parse(Console.ReadLine());
+        double result =2D*Math.PI*r;
+        Console.WriteLine($"{result:F12}");
+    }
+}
