@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+class Transport
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int fullCapacity = 12 + 8 + 4;
+        decimal peopleCourse = n / fullCapacity;
+        decimal remainingPeople = n % fullCapacity;
+        while (remainingPeople <= fullCapacity&&remainingPeople>0)
+        {
+            peopleCourse++;
+            remainingPeople -= fullCapacity;
+        }
+        Console.WriteLine(peopleCourse);
+    }
+}
