@@ -1,0 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+class TimeSinceBirthday
+{
+    static void Main()
+    {
+        Int16 year = Int16.Parse(Console.ReadLine());
+        Int32 days = year * 365;
+        Int32 hours = days * 24;
+        Int64 minutes = hours * 60;
+        Console.WriteLine($"{year} years = {days} days = {hours} hours = {minutes} minutes.");
+    }
+}
